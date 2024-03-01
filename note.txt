@@ -1,0 +1,24 @@
+https://docs.google.com/document/d/1-_7zMH0jYdFTkTDTX_EL-3Q3Bgt7NBvI/edit
+
+create tabel pembelian, penerimaan (awr)
+
+
+Pembelian Layout dipadakno sales mypos
+
+ketika sudah di input pembelian, maka di input juga di penerimaan
+(jumlahh penerimaan, tanggal penerimaan nullable)
+ketika barang sudah sampai, maka diupdate banyak barang, dan tanggal sekarang
+
+
+Sales {
+    yang terjual = stock sisa,
+    permintaan =  yang sebenernya diinginkan,
+    (ketika customer ingin beli 10 tapi stock hanya ada 5, maka permintaan diisi 10, dan yang terjual diisi 5)
+
+    ketika permintaan = safety stock = alert()
+
+    yang terjual di buat readonly,
+    ketika permintaan > stok, maka yang terjual = permintaan - stock.
+    ketika permintaan < stock, maka yang terjual = permintaan
+
+}
